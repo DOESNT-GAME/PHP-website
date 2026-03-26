@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 70px;
+    height: auto;
+    background-color: #1b5e20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+    color: floralwhite;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    flex-wrap: wrap;
+}
+header .logo {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+    object-fit: contain;
+}
+header .header-info {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+header .student-info {
+    color: floralwhite;
+    white-space: nowrap;
+}
+
+main.layout-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 20px 100px 20px;
+    min-height: calc(100vh - 140px);
+    gap: 20px;
+}
+.sidebar {
+    width: 220px;
+    flex-shrink: 0;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+.content-area {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1 {
+    color: #1b5e20;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 3px solid #4caf50;
+    padding-bottom: 10px;
+}
+h2 {
+    color: #2e7d32;
+    margin: 20px 0 15px 0;
+    font-size: 1.3em;
+    border-left: 4px solid #4caf50;
+    padding-left: 15px;
+}
+
+.main-menu {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e8f5e9;
+    flex-wrap: wrap;
+}
+.main-menu a {
+    padding: 10px 25px;
+    background-color: #1b5e20;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+.main-menu a:hover {
+    background-color: #2e7d32;
+}
+.main-menu a.selected_menu {
+    background-color: #4caf50;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.side-menu a {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.2s;
+    font-size: 15px;
+}
+.side-menu a:hover {
+    background-color: #e8f5e9;
+}
+.side-menu a.selected_menu {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+.mult-column {
+    line-height: 2.5;
+}
+.mult-column a {
+    color: #1b5e20;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+    margin: 0 2px;
+}
+.mult-column a:hover {
+    background-color: #e8f5e9;
+    text-decoration: underline;
+}
+
+.multiplication-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+}
+.multiplication-table td {
+    border: 1px solid #999;
+    padding: 15px;
+    vertical-align: top;
+    width: 12.5%;
+    background-color: #fafafa;
+}
+.multiplication-table td.single {
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: #e8f5e9;
+}
+
+.mult-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+.mult-column.block {
+    flex: 1 1 12%;
+    min-width: 120px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    line-height: 2.5;
+}
+.mult-column.single.block {
+    flex: 1 1 100%;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: #e8f5e9;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #424242;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 14px;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+.footer-info {
+    font-size: 13px;
+    color: #bdbdbd;
+    text-align: center;
+    line-height: 1.5;
+}
+footer .timestamp {
+    font-size: 12px;
+    color: #9e9e9e;
+    margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+    main.layout-container {
+        flex-direction: column;
+        padding: 100px 15px 100px 15px;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .main-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .main-menu a {
+        text-align: center;
+        width: 100%;
+    }
+    .mult-container {
+        flex-direction: column;
+    }
+    .mult-column.block {
+        flex: 1 1 100%;
+    }
+    .multiplication-table td {
+        display: block;
+        width: 100%;
+        border-bottom: 2px solid #4caf50;
+    }
+}
