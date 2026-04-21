@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛР №8</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
+        <div class="header-info">
+            <span class="student-info">Корепов Андрей Алексеевич | Группа: 241-352</span>
+        </div>
+    </header>
+    <main class="layout-container">
+        <aside class="sidebar">
+            <h1>ЛР №8</h1>
+            <h2>Анализ текста</h2>
+            <nav class="side-menu">
+                <a href="index.html" class="selected_menu">Ввод текста</a>
+            </nav>
+        </aside>
+        <section class="content-area">
+            <h1>Ввод текста для анализа</h1>
+            <form action="result.php" method="post" class="analysis-form">
+                <label for="data">Введите текст:</label>
+                <textarea name="data" id="data" rows="10" cols="50" placeholder="Напишите текст..." required></textarea>
+                <button type="submit" class="analyze-btn">Анализировать</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-info">Лабораторная работа №8. Анализ текстовой информации.</div>
+        <div class="timestamp" id="current-date"></div>
+    </footer>
+    <script>
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('ru-RU');
+    </script>
+</body>
+</html>
