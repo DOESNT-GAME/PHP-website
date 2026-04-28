@@ -1,0 +1,56 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background-color: #f5f5f5; color: #333; }
+
+/* HEADER & FOOTER (из вашего примера) */
+header { position: fixed; top: 0; left: 0; width: 100%; min-height: 70px; height: auto; background-color: #1b5e20; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; z-index: 1000; color: floralwhite; box-shadow: 0 2px 5px rgba(0,0,0,0.3); flex-wrap: wrap; }
+header .logo { height: 50px; width: auto; margin-right: 20px; object-fit: contain; }
+header .header-info { flex: 1; text-align: center; font-size: 18px; font-weight: 500; }
+header .student-info { color: floralwhite; white-space: nowrap; }
+footer { position: fixed; bottom: 0; left: 0; width: 100%; height: 70px; background-color: #424242; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #ffffff; font-size: 14px; z-index: 1000; box-shadow: 0 -2px 5px rgba(0,0,0,0.2); }
+.footer-info { font-size: 13px; color: #bdbdbd; text-align: center; line-height: 1.5; }
+footer .timestamp { font-size: 12px; color: #9e9e9e; margin-top: 4px; }
+
+/* LAYOUT */
+main.layout-container { display: flex; max-width: 1400px; margin: 0 auto; padding: 100px 20px 100px 20px; min-height: calc(100vh - 140px); gap: 20px; }
+.sidebar { width: 220px; flex-shrink: 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); height: fit-content; }
+.content-area { flex: 1; background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+h1 { color: #1b5e20; margin-bottom: 20px; font-size: 1.8em; border-bottom: 3px solid #4caf50; padding-bottom: 10px; }
+h2 { color: #2e7d32; margin: 20px 0 15px 0; font-size: 1.3em; border-left: 4px solid #4caf50; padding-left: 15px; }
+
+/* МЕНЮ (Синие ссылки, Красное выделение) */
+.main-menu, .side-menu { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; }
+.side-menu { flex-direction: column; gap: 8px; }
+.submenu { flex-direction: row; gap: 5px; margin-top: 10px; font-size: 0.85em; }
+.main-menu a, .side-menu a { padding: 10px 15px; background-color: #f5f5f5; color: #1565c0; text-decoration: none; border-radius: 4px; text-align: center; transition: all 0.2s; font-size: 15px; border: 2px solid transparent; }
+.main-menu a:hover, .side-menu a:hover { background-color: #e3f2fd; border-color: #90caf9; }
+.main-menu a.selected, .side-menu a.selected { background-color: #d32f2f; color: #ffffff; border-color: #b71c1c; }
+
+/* Формы */
+.analysis-form { display: flex; flex-direction: column; gap: 12px; max-width: 600px; margin-top: 15px; }
+.analysis-form input, .analysis-form select, .analysis-form textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-family: inherit; font-size: 14px; background-color: #fafafa; }
+.analyze-btn { padding: 12px 24px; background-color: #1b5e20; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; align-self: flex-start; transition: background 0.3s; }
+.analyze-btn:hover { background-color: #2e7d32; }
+
+/* Таблицы */
+.result-table { width: 100%; border-collapse: collapse; margin: 20px 0; background-color: #fff; font-size: 14px; }
+.result-table th, .result-table td { border: 1px solid #999; padding: 8px 10px; vertical-align: top; text-align: left; }
+.result-table th { background-color: #f9f9f9; font-weight: 600; color: #2e7d32; }
+
+/* Пагинация (Рамка 2px при наведении) */
+.pagination { display: flex; gap: 5px; margin-top: 15px; flex-wrap: wrap; }
+.pagination a.page-link { padding: 6px 12px; background: #f5f5f5; color: #1565c0; text-decoration: none; border-radius: 4px; border: 2px solid transparent; transition: all 0.2s; }
+.pagination a.page-link:hover { border: 2px solid #1565c0; background: #fff; }
+.pagination .current-page { padding: 6px 12px; background: #d32f2f; color: #fff; border-radius: 4px; font-weight: bold; border: 2px solid #b71c1c; }
+
+/* Сообщения */
+.msg-success { color: #2e7d32; font-weight: bold; padding: 15px; background: #e8f5e9; border-radius: 5px; border: 1px solid #a5d6a7; margin: 15px 0; }
+.msg-error, .src_error { color: #c62828; font-weight: bold; padding: 15px; background: #ffebee; border-radius: 5px; border: 1px solid #ef9a9a; margin: 15px 0; }
+
+/* Списки редактирования/удаления */
+.edit-links, .delete-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; }
+.edit-link, .delete-link { padding: 8px 12px; background: #f5f5f5; color: #1565c0; text-decoration: none; border-radius: 4px; border: 2px solid transparent; }
+.edit-link:hover, .delete-link:hover { background: #e3f2fd; border-color: #90caf9; }
+.current-edit-link { padding: 8px 12px; background: #fff3e0; color: #e65100; border: 2px solid #ff9800; border-radius: 4px; font-weight: bold; }
+
+/* Адаптив */
+@media (max-width: 768px) { main.layout-container { flex-direction: column; padding: 100px 15px 100px 15px; } .sidebar { width: 100%; } .main-menu, .side-menu { flex-direction: column; } .result-table { display: block; overflow-x: auto; } }
